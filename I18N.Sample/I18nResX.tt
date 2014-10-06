@@ -50,7 +50,7 @@
     T4Helper = new DteHelper(this.Host);
 
     var projectItems  = T4Helper.GetAllProjectItems();
-    var project       = T4Helper.GetProject(T4Helper.GetCurrentProjectName());
+    var project       = T4Helper.GetCurrentProject();
     var projectPath   = System.IO.Path.GetDirectoryName(project.FileName);
     var rootNameSpace = project.Properties.Item("RootNamespace").Value.ToString();
 
@@ -677,6 +677,10 @@ namespace <#= T4ResXHelpers.Current.NormalizeString(item.NameSpace)#>  {
         public string GetCurrentProjectName()
         {
             return Dte.ActiveDocument.ProjectItem.ContainingProject.Name;
+        }
+
+        public EnvDTE.Project GetCurrentProject(){
+            return Dte.ActiveDocument.ProjectItem.ContainingProject;
         }
 
         /// <summary>
