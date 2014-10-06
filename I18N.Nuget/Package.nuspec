@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>I18N.Nuget</id>
-    <version>1.0.0</version>
-    <title>I18N.Nuget</title>
+    <id>I18N.Reactive</id>
+    <version>1.0.1</version>
+    <title>I18N.Reactive</title>
     <authors>software</authors>
     <owners>Weingartner</owners>
     <description>
@@ -17,7 +17,7 @@
     properties generate INPC change notification when the culture changes.
     </summary>
     <language>en-US</language>
-    <projectUrl>https://nuget.org/packages/I18N.Nuget</projectUrl>
+    <projectUrl>https://github.com/Weingartner/T4ResX/wiki</projectUrl>
     <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
@@ -28,7 +28,7 @@
         </group>
     </dependencies>
     <references></references>
-    <tags>I18N T4 Culture</tags>
+    <tags>I18N Reactive T4 Culture</tags>
   </metadata>
   <files>
     <file src="..\CultureManager\bin\Release\I18N.dll" target="lib\net45" />
