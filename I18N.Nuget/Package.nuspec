@@ -2,9 +2,9 @@
 <package >
   <metadata>
     <id>I18N.Reactive</id>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <title>I18N.Reactive</title>
-    <authors>software</authors>
+    <authors>Weingartner</authors>
     <owners>Weingartner</owners>
     <description>
     Implements a type safe resource cs file generation. The generated properties are avaliable on a singleton instance. The
@@ -17,18 +17,18 @@
     properties generate INPC change notification when the culture changes.
     </summary>
     <language>en-US</language>
-    <projectUrl>https://github.com/Weingartner/T4ResX/wiki</projectUrl>
+    <projectUrl>https://github.com/Weingartner/I18N.Reactive</projectUrl>
     <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
     <copyright>Weingartner 2014</copyright>
     <dependencies>
         <group targetFramework="net45">
-            <dependency id="reactiveui" version ="5.0.0"/>
+            <dependency id="reactiveui-core" version ="5.4.0"/>
         </group>
     </dependencies>
     <references></references>
-    <tags>I18N Reactive T4 Culture</tags>
+    <tags>I18N Reactive T4 Culture WPF</tags>
   </metadata>
   <files>
     <file src="..\CultureManager\bin\Release\I18N.dll" target="lib\net45" />
