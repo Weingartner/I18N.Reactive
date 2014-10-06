@@ -23,6 +23,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{57A354
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I18N.Nuget", "I18N.Nuget\I18N.Nuget.csproj", "{0451BAEF-DF2E-4B98-8644-94EE9415E389}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DF8D0115-B628-4868-A7BA-85992942CD4F} = {DF8D0115-B628-4868-A7BA-85992942CD4F}
+		{07316DCE-71E4-454B-B8DD-D899DA93BD88} = {07316DCE-71E4-454B-B8DD-D899DA93BD88}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

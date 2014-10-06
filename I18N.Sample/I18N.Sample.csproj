@@ -66,6 +66,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="I18nResX.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>I18nResX.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -75,6 +80,10 @@
     <EmbeddedResource Include="Models\User.resx" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="I18nResX.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>I18nResX.cs</LastGenOutput>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
