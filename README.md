@@ -25,6 +25,25 @@ Transform ResX files into strongly typed classes via T4
   - ``[Display(Name = "Pseudo", ResourceType = typeof(Resources.User))]``
 - Use it again in your dlls to return localized error messages
   - ``return Resources.User.RegisterError;``
+  - 
+  
+#### Use resources inside WPF that will update with culture changes
+
+```
+<ObjectDataProvider x:Key="I18N" DataType="Branding"/>
+````
+
+and in your controls
+
+````
+<Label Content={Binding Source={StaticResource I18N} Path=JavaScriptTitle} />
+```
+
+and update the culture simply by
+
+```
+CultureResources.Instance.CultureInfo = myCultureRetrievedFromSomeSetting;
+```
 
 ####Use variables inside your ResX files
 - Format various messages
