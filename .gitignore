@@ -6,3 +6,6 @@
 *.user
 packages
 I18N.Nuget/NuGet.log
+*.nupkg
+*.nupkg.bak
+*.DotSettings

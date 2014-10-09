@@ -1,0 +1,142 @@
+﻿<#@ template language="C#" debug="true" hostspecific="true" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Xml" #>
+<#@ import namespace="Microsoft.VisualStudio.TextTemplating" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Globalization" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Text.RegularExpressions" #>
+<# 
+/*
+ * I18N.Reactive
+ * Author  Robert Hoffmann (itechnology)
+ *         Weingartner Maschinenbau GmbH
+ * License MIT / http://bit.ly/mit-license
+ *
+ * Version 2.00
+ * https://github.com/Weingartner/I18N.Reactive
+ */
+#>
+// This code is automatically generated and shares the copyright of the library it is generated into.
+using System;
+using System.ComponentModel;
+using System.Linq; 
+using System.Reflection;
+using System.Collections.Generic; 
+using System.Text.RegularExpressions;
+using Weingartner.I18N;
+
+namespace <#= I18NHelpers.Current.NormalizeString(Namespace)#>  {
+    public class <#= ClassName #> : INotifyPropertyChanged {
+    <#
+        var path =	I18NHelpers.Current.NormalizeString(Namespace.Replace(Namespace, "")) + "^" + ClassName;
+        if (path.StartsWith(".")) {
+            path = path.Substring(1);
+        }
+    #>
+
+        public <#= ClassName #> (){
+            CultureResources
+                .Instance.PropertyChanged += (s, e) => {
+                    if (e.PropertyName == "CultureInfo") {
+                        OnPropertyChanged(string.Empty);
+                    }
+                };
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        private static System.Resources.ResourceManager _resourceManager;    
+    
+        ///<summary>
+        /// Get the ResourceManager
+        ///</summary>
+        private static System.Resources.ResourceManager ResourceManager 
+        {
+            get 
+            {
+                return _resourceManager ?? (_resourceManager = new System.Resources.ResourceManager("<#= I18NHelpers.Current.NormalizeString(Namespace) #>.<#= ClassName #>", typeof(<#= ClassName #>).Assembly));
+            }
+        }
+
+        ///<summary>
+        ///	Get localized entry for a given key
+        ///</summary>
+        public static string GetResourceString(string key, params object[] args)
+        {
+            var value = ResourceManager.GetString(key, CultureResources.Instance.CultureInfo );
+            return CultureResources.Instance.ProcessArguments(value, args);
+        } 
+<#
+      foreach (var item in Items) {
+
+        if (I18NHelpers.Current.HasTokens(item.Value)) {
+        #>
+
+        ///<summary>
+        ///    <list type='bullet'>
+        ///        <item>
+        ///            <description><#= item.Value.Replace("\r", "").Replace("\n", " ")#></description>
+        ///        </item>
+        ///        <item>
+        ///            <description><#= item.Comment.Replace("\r", "").Replace("\n", " ")#></description>
+        ///        </item>
+        ///    </list>
+        ///</summary>
+        public string <#= I18NHelpers.Current.NormalizeItem(item.Key, false)#>Formatted(params object[] args) { return GetResourceString("<#=I18NHelpers.Current.NormalizeItem(item.Key, false)#>", args); }
+        <#
+        } // END HasTokens(item.Value)
+        #>
+
+        ///<summary>
+        ///    <list type='bullet'>
+        ///        <item>
+        ///            <description><#= item.Value.Replace("\r", "").Replace("\n", " ")#></description>
+        ///        </item>
+        ///        <item>
+        ///            <description><#= item.Comment.Replace("\r", "").Replace("\n", " ")#></description>
+        ///        </item>
+        ///    </list>
+        ///</summary>
+        public string <#= I18NHelpers.Current.NormalizeItem(item.Key, false)#> { get { return GetResourceString("<#=item.Key#>"); } }
+<# 
+        if ((I18NHelpers.Current.GetType(item.Comment) & I18NHelpers.ResxType.Constant) == I18NHelpers.ResxType.Constant) {	
+        #>
+
+        ///<summary>
+        ///    <list type='bullet'>
+        ///        <item>
+        ///            <description><#= item.Value.Replace("\r", "").Replace("\n", " ")#></description>
+        ///        </item>
+        ///        <item>
+        ///            <description><#= item.Comment.Replace("\r", "").Replace("\n", " ")#></description>
+        ///        </item>
+        ///        <item>
+        ///            <description>
+        ///					There are places where we cannot use strings as they are considered dynamic
+        ///					
+        ///					[RegularExpressionAttribute(User.PseudoRegexConstant, ErrorMessageResourceName = "PseudoError", ErrorMessageResourceType = typeof(User))]
+        ///
+        ///					However:
+        ///					constant = no dynamic content
+        ///					If you have an idea of how to make constants dynamically localizable, let me know !
+        ///				</description>
+        ///        </item>
+        ///    </list>
+        ///</summary>	
+        public const string <#=I18NHelpers.Current.NormalizeItem(item.Key, false)#>Constant = "<#=item.Value.Replace("\r", "").Replace("\n", " ")#>";
+<#
+        } // END I18NHelpers.Current.GetType(item.Comment)
+    } // END looping through items
+#>
+    }
+}

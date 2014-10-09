@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>I18N.Reactive</id>
-    <version>1.0.4</version>
+    <version>2.0.27</version>
     <title>I18N.Reactive</title>
     <authors>Weingartner</authors>
     <owners>Weingartner</owners>
@@ -24,15 +24,17 @@
     <copyright>Weingartner 2014</copyright>
     <dependencies>
         <group targetFramework="net45">
-            <dependency id="reactiveui-core" version ="5.4.0"/>
+            <dependency id="StudioShell.Provider" />
         </group>
     </dependencies>
     <references></references>
     <tags>I18N Reactive T4 Culture WPF</tags>
   </metadata>
   <files>
-    <file src="..\CultureManager\bin\Release\I18N.dll" target="lib\net45" />
-    <file src="tools\" target="tools" />
-    <file src="..\I18N.Sample\I18nResX.tt" target="content" />
+    <file src="..\I18N\bin\Release\I18N.dll" target="lib\net45" />
+    <file src="tools\init.ps1" target="tools" />
+    <file src="tools\install.ps1" target="tools" />
+    <file src="..\I18N.Reactive.Vsix\bin\Release\I18N.Reactive.vsix" target="tools" />
+    <!--<file src="content\" target="content" />-->
   </files>
 </package>

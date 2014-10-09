@@ -1,16 +1,18 @@
 ﻿using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Resources;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("T4ResXSampleLocalization")]
-[assembly: AssemblyDescription("T4ResX examples")]
+[assembly: AssemblyTitle("CultureManager")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("I-Technology.NET")]
-[assembly: AssemblyProduct("T4ResXSampleLocalization")]
-[assembly: AssemblyCopyright("Copyright ©  2012")]
-[assembly: AssemblyTrademark("I-Technology.NET")]
+[assembly: AssemblyCompany("Weingartner")]
+[assembly: AssemblyProduct("I18N Support")]
+[assembly: AssemblyCopyright("MIT Licenced")]
+[assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
@@ -19,7 +21,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("fa0ffbd6-2e43-494b-abf6-a66766ab1e75")]
+[assembly: Guid("25deeb17-80a2-4822-b99d-aa4f9976e29f")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -31,4 +33,6 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.*")]
+[assembly: AssemblyVersion("2.0.11.0")]
+[assembly: AssemblyFileVersion("2.0.11.0")]
+[assembly: NeutralResourcesLanguageAttribute("en")]

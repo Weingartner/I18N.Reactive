@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="86A2E64F-1782-480F-A3B7-8C52E9E786FF">
+    <Name>I18N.Reactive</Name>
+    <Author>Microsoft</Author>
+    <Version>2.0.11</Version>
+    <Description xml:space="preserve">Custom tool for converting ResX files to reactive and strongly typed resource files.</Description>
+    <Locale>1033</Locale>
+    <InstalledByMsi>false</InstalledByMsi>
+    <SupportedProducts>
+      <!--<VisualStudio Version="10.0">
+        <Edition>Pro</Edition>
+        <Edition>Express_All</Edition>
+      </VisualStudio>-->
+      <VisualStudio Version="11.0">
+        <Edition>Pro</Edition>
+        <!--<Edition>Express_All</Edition>-->
+      </VisualStudio>
+      <!--<VisualStudio Version="12.0">
+        <Edition>Pro</Edition>
+        <Edition>Express_All</Edition>
+      </VisualStudio>-->
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.5" MaxVersion="4.5" />
+  </Identifier>
+  <References/>
+  <Content>
+    <VsPackage>|%CurrentProject%;PkgdefProjectOutputGroup|</VsPackage>
+  </Content>
+</Vsix>

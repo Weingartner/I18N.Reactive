@@ -1,19 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I18N.Sample", "I18N.Sample\I18N.Sample.csproj", "{07316DCE-71E4-454B-B8DD-D899DA93BD88}"
-	ProjectSection(ProjectDependencies) = postProject
-		{DF8D0115-B628-4868-A7BA-85992942CD4F} = {DF8D0115-B628-4868-A7BA-85992942CD4F}
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "I18nResX", "I18nResX", "{49FD0ABC-38F0-4FE7-AD6A-A0AB648E9F03}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
-		I18nResX.tt = I18nResX.tt
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I18N", "CultureManager\I18N.csproj", "{DF8D0115-B628-4868-A7BA-85992942CD4F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I18N", "I18N\I18N.csproj", "{DF8D0115-B628-4868-A7BA-85992942CD4F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{57A35464-7E42-4E3E-A097-A6F3DD530C2A}"
 	ProjectSection(SolutionItems) = preProject
@@ -24,8 +18,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{57A354
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I18N.Nuget", "I18N.Nuget\I18N.Nuget.csproj", "{0451BAEF-DF2E-4B98-8644-94EE9415E389}"
 	ProjectSection(ProjectDependencies) = postProject
+		{8B1E0410-E61A-4973-9E64-A0CF2C494F21} = {8B1E0410-E61A-4973-9E64-A0CF2C494F21}
 		{DF8D0115-B628-4868-A7BA-85992942CD4F} = {DF8D0115-B628-4868-A7BA-85992942CD4F}
-		{07316DCE-71E4-454B-B8DD-D899DA93BD88} = {07316DCE-71E4-454B-B8DD-D899DA93BD88}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I18N.Reactive.Vsix", "I18N.Reactive.Vsix\I18N.Reactive.Vsix.csproj", "{8B1E0410-E61A-4973-9E64-A0CF2C494F21}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{46DE9F3F-3131-4EF9-A96B-4F5551CCB363}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global
@@ -34,10 +35,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{07316DCE-71E4-454B-B8DD-D899DA93BD88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{07316DCE-71E4-454B-B8DD-D899DA93BD88}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{07316DCE-71E4-454B-B8DD-D899DA93BD88}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{07316DCE-71E4-454B-B8DD-D899DA93BD88}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DF8D0115-B628-4868-A7BA-85992942CD4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DF8D0115-B628-4868-A7BA-85992942CD4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF8D0115-B628-4868-A7BA-85992942CD4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -46,6 +43,10 @@ Global
 		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B1E0410-E61A-4973-9E64-A0CF2C494F21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B1E0410-E61A-4973-9E64-A0CF2C494F21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B1E0410-E61A-4973-9E64-A0CF2C494F21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B1E0410-E61A-4973-9E64-A0CF2C494F21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

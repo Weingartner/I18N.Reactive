@@ -1,21 +1,16 @@
-T4ResX
+I18N.Reactive
 ======
-Transform ResX files into strongly typed classes via T4
+Transform ResX files into strongly typed classes via T4 that can be updated at runtime,
 
-####[Consult Documentation](https://github.com/itechnology/T4ResX/wiki)
-* [Sample WebSite](http://t4resx.azurewebsites.net)
-  * Localized HTML, JavaScript & Code Behind
+####[Consult Documentation](https://github.com/weingartner/I18N.Reactive)
 
 ##Download
- * [Nuget Package](https://nuget.org/packages/T4ResX)
- * [Visual Studio Extension](http://visualstudiogallery.msdn.microsoft.com/8b008710-a354-4503-b70d-784493114d5d)
- * [Single File](https://raw.github.com/itechnology/T4ResX/master/T4ResX.tt)
- * [Sample Solution](https://github.com/itechnology/T4ResX/archive/master.zip) 
+ * [Nuget Package](https://nuget.org/packages/I18N.Reactive)
 
 
 #Overview
 
-##Have a project that uses ResX files ?
+##Have a project that uses ResX files and need runtime I18N switching support ?
 
 - Transform ResX files in a project into a strongly typed assembly
 - Access your translations
@@ -25,25 +20,6 @@ Transform ResX files into strongly typed classes via T4
   - ``[Display(Name = "Pseudo", ResourceType = typeof(Resources.User))]``
 - Use it again in your dlls to return localized error messages
   - ``return Resources.User.RegisterError;``
-  - 
-  
-#### Use resources inside WPF that will update with culture changes
-
-```
-<ObjectDataProvider x:Key="I18N" DataType="Branding"/>
-````
-
-and in your controls
-
-````
-<Label Content={Binding Source={StaticResource I18N} Path=JavaScriptTitle} />
-```
-
-and update the culture simply by
-
-```
-CultureResources.Instance.CultureInfo = myCultureRetrievedFromSomeSetting;
-```
 
 ####Use variables inside your ResX files
 - Format various messages
@@ -58,21 +34,20 @@ CultureResources.Instance.CultureInfo = myCultureRetrievedFromSomeSetting;
      - .cs: ``return Resources.Branding.Feature("T4")``
      - result: ``I-Technology announces new feature for T4``
 
-####Export & Reuse your translations
-- Pull translations directly into localized JavaScript files
-  - ``<script src="/GetNameSpaceAsJs?ns=Resources.User"></script>``
-- Or assign inline
-  - ``var localized = GetNameSpaceAsJson("Resources.User");``
-- Grab a series of translations as collection
-  - ``Dictionary<string, Dictionary<string string>> items = GetResourcesByNameSpace("Resources.User");``
-- Or do just grab bits & pieces
-  - ``Dictionary<string, Dictionary<string string>> items = GetResourcesByNameSpace(".*");``
-  - ``Dictionary<string, Dictionary<string string>> items = GetResourcesByNameSpace("Resources.User.*");``
-  - ``Dictionary<string, Dictionary<string string>> items = GetResourcesByNameSpace("^User|Branding");``
+##Implementation Details
 
-##Updates
+    This nuget package automatically installs a VSIX based custom tool into visual studio. This
+    VSIX is stored in the tools directory of the nuget package. It is not in the VS extensions
+    gallery. The custom tool is for converting the ResX files into strongly typed cs files. 
 
-###0.99 / 2012-12-05
-* First commit.
-* Sample site up on Windows Azure @ [t4resx.azurewebsites.net](http://t4resx.azurewebsites.net/)
-* If it's down, it might be normal ..running on a free instance with daily resource limits
+    All __resx__ files found in the project after install of this nuget package will be converted
+    to use __I18NReactive__ custom tool.
+    
+    This is better than dropping t4 templates into the folder which process the resx files. The
+    main problem with the t4 template approach is that updates to the resx file are not automatically
+    generated into the cs file. The user has to manually invoke the builder. With the custom
+    tool approach the cs file is regenerated every time the resx file changes.
+
+## TODO
+
+    Extract the VSIX packaging logic into it's own nuget package
