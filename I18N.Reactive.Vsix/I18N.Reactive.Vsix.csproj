@@ -94,7 +94,6 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CodeGeneratorRegistrationAttribute.cs" />
     <Compile Include="Guids.cs" />
     <Compile Include="I18NResX.cs">
       <AutoGen>True</AutoGen>
