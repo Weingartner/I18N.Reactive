@@ -2,8 +2,8 @@
 <Vsix Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
   <Identifier Id="86A2E64F-1782-480F-A3B7-8C52E9E786FF">
     <Name>I18N.Reactive</Name>
-    <Author>Microsoft</Author>
-    <Version>2.0.11</Version>
+    <Author>Weingartner Maschinenbau GmbH</Author>
+    <Version>2.0.33</Version>
     <Description xml:space="preserve">Custom tool for converting ResX files to reactive and strongly typed resource files.</Description>
     <Locale>1033</Locale>
     <InstalledByMsi>false</InstalledByMsi>
