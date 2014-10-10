@@ -65,7 +65,7 @@ function Vsix-Install-If-Newer{
     if (!$info.version.Equals($installedVersion)) {
         if ($vsix) {
             Write-Host "VSIX: Deleting old version of $($info.name).$installedVersion"
-            Start-Process $vsixInstallerPath -ArgumentList /uninstall:$info.identifier -Wait
+            Start-Process $vsixInstallerPath -ArgumentList /uninstall:$($info.identifier) -Wait
         }
         Write-Host "VSIX: Installing new version of $($info.name).$($info.version)"
         Start-Process $vsixInstallerPath -ArgumentList $path -Wait
