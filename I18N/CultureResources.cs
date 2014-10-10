@@ -20,7 +20,7 @@ namespace Weingartner.I18N
             get { return _CultureInfo; }
             set
             {
-                if (_CultureInfo.Equals(value))
+                if (_CultureInfo != null && _CultureInfo.Equals(value))
                     return;
                 _CultureInfo = value;
                 OnPropertyChanged();
