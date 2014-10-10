@@ -39,13 +39,26 @@ namespace <#= I18NHelpers.Current.NormalizeString(Namespace)#>  {
         }
     #>
 
-        public <#= ClassName #> (){
+        private <#= ClassName #> (){
             CultureResources
                 .Instance.PropertyChanged += (s, e) => {
                     if (e.PropertyName == "CultureInfo") {
-                        OnPropertyChanged(string.Empty);
+                        RaisePropertyChanged();
                     }
                 };
+        }
+
+        public static readonly <#= ClassName #> Instance = new <#= ClassName #>();
+
+        // This is for the XAML code
+        public static <#= ClassName #> GetInstance() {
+            return Instance;
+        }
+
+        public void RaisePropertyChanged() {
+<# foreach (var item in Items) { #>
+            OnPropertyChanged("<#= I18NHelpers.Current.NormalizeItem(item.Key, false) #>");
+<# } #>
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
