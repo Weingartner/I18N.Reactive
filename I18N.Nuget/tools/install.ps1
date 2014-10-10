@@ -7,11 +7,26 @@ param($installPath, $toolsPath, $package, $project)
 # $package is a reference to the package object.
 # $project is a reference to the project the package was installed to.
 
-$dteProject = "dte:/solution/projects/$($project.Name)"
+$dteProject = "dte:/solution/projects/$($project.ProjectName)"
 ls $dteProject -Recurse `
-    | Where { $_.Name -match "resx" } `
+    | Where { $_.Name -match "\.resx$" } `
     | ForEach-Object {
         $toolName = "I18NReactive"
-        Write-Host "Set CustomTool of $($_.PSPath) to $toolName"
-        set-item -Path "$($_.PSPath)\ItemProperties\CustomTool" -Value $toolName
+        $ct = "$($_.PSPath)\ItemProperties\CustomTool"
+        if((get-item $ct).Value -eq "ResXFileCodeGenerator")
+        {
+            Write-Host "Set CustomTool of '$($_.PSPath)' to '$toolName'"
+            set-item -Path $ct -Value $toolName
+        }
+        else
+        {
+            if((get-item $ct).Value -eq $toolName)
+            {
+                Write-Host "CustomTool of '$($_.PSPath)' was already set to '$toolName'"
+            }
+            else
+            {
+                Write-Host "CustomTool of '$($_.PSPath)' is '$((get-item $ct).Value)' and will not be changed"
+            }
+        }
     }
