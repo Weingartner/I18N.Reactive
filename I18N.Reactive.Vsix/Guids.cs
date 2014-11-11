@@ -11,7 +11,7 @@ PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
 
 using System;
 
-namespace I18N.Reactive
+namespace I18N.Reactive.Vsix
 {
     static class GuidList
     {

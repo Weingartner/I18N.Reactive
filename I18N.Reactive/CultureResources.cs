@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 using Weingartner.I18N.Annotations;
 
-namespace Weingartner.I18N
+namespace I18N.Reactive
 {
     /// <summary>
     /// Wraps up XAML access to instance of WPFLocalize.Properties.Resources, list of available cultures, and method to change culture

@@ -5,12 +5,12 @@ using System;
 using System.Runtime.InteropServices;
 using System.Text;
 using Microsoft.VisualStudio;
+using Microsoft.VisualStudio.OLE.Interop;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
-using Microsoft.VisualStudio.OLE.Interop;
 using VSLangProj80;
 
-namespace I18N.Reactive
+namespace I18N.Reactive.Vsix
 {
     [ComVisible(true)]
     [Guid(GuidList.GuidI18NReactivetring)]

@@ -7,7 +7,7 @@
 //     the code is regenerated.
 // </auto-generated>
 // ------------------------------------------------------------------------------
-namespace I18N.Reactive
+namespace I18N.Reactive.Vsix
 {
     using Microsoft.VisualStudio.TextTemplating;
     using System;
@@ -23,7 +23,7 @@ namespace I18N.Reactive
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+    #line 1 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "11.0.0.0")]
     public partial class I18NResX : I18NResXBase
     {
@@ -34,7 +34,7 @@ namespace I18N.Reactive
         public virtual string TransformText()
         {
             
-            #line 13 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 13 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
  
 /*
  * I18N.Reactive
@@ -56,25 +56,25 @@ using System.Linq;
 using System.Reflection;
 using System.Collections.Generic; 
 using System.Text.RegularExpressions;
-using Weingartner.I18N;
+using I18N.Reactive;
 
 namespace ");
             
-            #line 33 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 33 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(I18NHelpers.Current.NormalizeString(Namespace)));
             
             #line default
             #line hidden
             this.Write("  {\r\n    public class ");
             
-            #line 34 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 34 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
             
             #line default
             #line hidden
             this.Write(" : INotifyPropertyChanged {\r\n    ");
             
-            #line 35 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 35 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
 
         var path =	I18NHelpers.Current.NormalizeString(Namespace.Replace(Namespace, "")) + "^" + ClassName;
         if (path.StartsWith(".")) {
@@ -86,7 +86,7 @@ namespace ");
             #line hidden
             this.Write("\r\n        private ");
             
-            #line 42 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 42 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
             
             #line default
@@ -102,21 +102,21 @@ namespace ");
 
         public static readonly ");
             
-            #line 51 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 51 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
             
             #line default
             #line hidden
             this.Write(" Instance = new ");
             
-            #line 51 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 51 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
             
             #line default
             #line hidden
             this.Write("();\r\n\r\n        // This is for the XAML code\r\n        public static ");
             
-            #line 54 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 54 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
             
             #line default
@@ -124,21 +124,21 @@ namespace ");
             this.Write(" GetInstance() {\r\n            return Instance;\r\n        }\r\n\r\n        public void " +
                     "RaisePropertyChanged() {\r\n");
             
-            #line 59 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 59 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
  foreach (var item in Items) { 
             
             #line default
             #line hidden
             this.Write("            OnPropertyChanged(\"");
             
-            #line 60 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 60 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(I18NHelpers.Current.NormalizeItem(item.Key, false)));
             
             #line default
             #line hidden
             this.Write("\");\r\n");
             
-            #line 61 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 61 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
  } 
             
             #line default
@@ -163,21 +163,21 @@ namespace ");
             {
                 return _resourceManager ?? (_resourceManager = new System.Resources.ResourceManager(""");
             
-            #line 80 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 80 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(I18NHelpers.Current.NormalizeString(Namespace)));
             
             #line default
             #line hidden
             this.Write(".");
             
-            #line 80 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 80 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
             
             #line default
             #line hidden
             this.Write("\", typeof(");
             
-            #line 80 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 80 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(ClassName));
             
             #line default
@@ -196,7 +196,7 @@ namespace ");
         } 
 ");
             
-            #line 92 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 92 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
 
       foreach (var item in Items) {
 
@@ -208,7 +208,7 @@ namespace ");
             this.Write("\r\n        ///<summary>\r\n        ///    <list type=\'bullet\'>\r\n        ///        <" +
                     "item>\r\n        ///            <description>");
             
-            #line 101 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 101 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(item.Value.Replace("\r", "").Replace("\n", " ")));
             
             #line default
@@ -216,7 +216,7 @@ namespace ");
             this.Write("</description>\r\n        ///        </item>\r\n        ///        <item>\r\n        //" +
                     "/            <description>");
             
-            #line 104 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 104 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(item.Comment.Replace("\r", "").Replace("\n", " ")));
             
             #line default
@@ -224,21 +224,21 @@ namespace ");
             this.Write("</description>\r\n        ///        </item>\r\n        ///    </list>\r\n        ///</" +
                     "summary>\r\n        public string ");
             
-            #line 108 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 108 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(I18NHelpers.Current.NormalizeItem(item.Key, false)));
             
             #line default
             #line hidden
             this.Write("Formatted(params object[] args) { return GetResourceString(\"");
             
-            #line 108 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 108 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(I18NHelpers.Current.NormalizeItem(item.Key, false)));
             
             #line default
             #line hidden
             this.Write("\", args); }\r\n        ");
             
-            #line 109 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 109 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
 
         } // END HasTokens(item.Value)
         
@@ -248,7 +248,7 @@ namespace ");
             this.Write("\r\n        ///<summary>\r\n        ///    <list type=\'bullet\'>\r\n        ///        <" +
                     "item>\r\n        ///            <description>");
             
-            #line 116 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 116 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(item.Value.Replace("\r", "").Replace("\n", " ")));
             
             #line default
@@ -256,7 +256,7 @@ namespace ");
             this.Write("</description>\r\n        ///        </item>\r\n        ///        <item>\r\n        //" +
                     "/            <description>");
             
-            #line 119 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 119 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(item.Comment.Replace("\r", "").Replace("\n", " ")));
             
             #line default
@@ -264,21 +264,21 @@ namespace ");
             this.Write("</description>\r\n        ///        </item>\r\n        ///    </list>\r\n        ///</" +
                     "summary>\r\n        public string ");
             
-            #line 123 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 123 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(I18NHelpers.Current.NormalizeItem(item.Key, false)));
             
             #line default
             #line hidden
             this.Write(" { get { return GetResourceString(\"");
             
-            #line 123 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 123 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(item.Key));
             
             #line default
             #line hidden
             this.Write("\"); } }\r\n");
             
-            #line 124 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 124 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
  
         if ((I18NHelpers.Current.GetType(item.Comment) & I18NHelpers.ResxType.Constant) == I18NHelpers.ResxType.Constant) {	
         
@@ -288,7 +288,7 @@ namespace ");
             this.Write("\r\n        ///<summary>\r\n        ///    <list type=\'bullet\'>\r\n        ///        <" +
                     "item>\r\n        ///            <description>");
             
-            #line 131 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 131 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(item.Value.Replace("\r", "").Replace("\n", " ")));
             
             #line default
@@ -296,7 +296,7 @@ namespace ");
             this.Write("</description>\r\n        ///        </item>\r\n        ///        <item>\r\n        //" +
                     "/            <description>");
             
-            #line 134 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 134 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(item.Comment.Replace("\r", "").Replace("\n", " ")));
             
             #line default
@@ -318,21 +318,21 @@ namespace ");
         ///</summary>	
         public const string ");
             
-            #line 149 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 149 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(I18NHelpers.Current.NormalizeItem(item.Key, false)));
             
             #line default
             #line hidden
             this.Write("Constant = \"");
             
-            #line 149 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 149 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(item.Value.Replace("\r", "").Replace("\n", " ")));
             
             #line default
             #line hidden
             this.Write("\";\r\n");
             
-            #line 150 "C:\Users\egger\Workspace\I18NResX\I18N.Reactive.Vsix\I18NResX.tt"
+            #line 150 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
 
         } // END I18NHelpers.Current.GetType(item.Comment)
     } // END looping through items

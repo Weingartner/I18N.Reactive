@@ -1,11 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I18N.Nuget", "I18N.Nuget\I18N.Nuget.csproj", "{0451BAEF-DF2E-4B98-8644-94EE9415E389}"
-	ProjectSection(ProjectDependencies) = postProject
-		{8B1E0410-E61A-4973-9E64-A0CF2C494F21} = {8B1E0410-E61A-4973-9E64-A0CF2C494F21}
-		{DF8D0115-B628-4868-A7BA-85992942CD4F} = {DF8D0115-B628-4868-A7BA-85992942CD4F}
-	EndProjectSection
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I18N.Reactive", "I18N.Reactive\I18N.Reactive.csproj", "{DF8D0115-B628-4868-A7BA-85992942CD4F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I18N.Reactive.Vsix", "I18N.Reactive.Vsix\I18N.Reactive.Vsix.csproj", "{8B1E0410-E61A-4973-9E64-A0CF2C494F21}"

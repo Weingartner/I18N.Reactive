@@ -7,8 +7,8 @@
     <ProjectGuid>{DF8D0115-B628-4868-A7BA-85992942CD4F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Weingartner.I18N</RootNamespace>
-    <AssemblyName>I18N</AssemblyName>
+    <RootNamespace>I18N.Reactive</RootNamespace>
+    <AssemblyName>I18N.Reactive</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
