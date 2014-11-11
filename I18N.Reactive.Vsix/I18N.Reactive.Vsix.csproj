@@ -10,7 +10,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>I18N.Reactive.Vsix</RootNamespace>
-    <AssemblyName>I18N.Reactive.Vsix</AssemblyName>
+    <AssemblyName>I18N.Reactive</AssemblyName>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>
     </AssemblyOriginatorKeyFile>
