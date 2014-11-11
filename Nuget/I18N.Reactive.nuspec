@@ -34,6 +34,6 @@
     <file src="..\I18N.Reactive\bin\Release\I18N.Reactive.dll" target="lib\net45" />
     <file src="tools\init.ps1" target="tools" />
     <file src="tools\install.ps1" target="tools" />
-    <file src="..\I18N.Reactive.Vsix\bin\Release\I18N.Reactive.Vsix.vsix" target="tools" />
+    <file src="..\I18N.Reactive.Vsix\bin\Release\I18N.Reactive.vsix" target="tools" />
   </files>
 </package>
