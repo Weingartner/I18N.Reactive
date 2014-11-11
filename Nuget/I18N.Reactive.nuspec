@@ -31,10 +31,9 @@
     <tags>I18N Reactive T4 Culture WPF</tags>
   </metadata>
   <files>
-    <!-- note that the working dir on the build server is the base dir of the project -->
-    <file src="I18N.Reactive\bin\Release\I18N.Reactive.dll" target="lib\net45" />
-    <file src="Nuget\tools\init.ps1" target="tools" />
-    <file src="Nuget\tools\install.ps1" target="tools" />
-    <file src="I18N.Reactive.Vsix\bin\Release\I18N.Reactive.vsix" target="tools" />
+    <file src="..\I18N.Reactive\bin\Release\I18N.Reactive.dll" target="lib\net45" />
+    <file src="tools\init.ps1" target="tools" />
+    <file src="tools\install.ps1" target="tools" />
+    <file src="..\I18N.Reactive.Vsix\bin\Release\I18N.Reactive.vsix" target="tools" />
   </files>
 </package>
