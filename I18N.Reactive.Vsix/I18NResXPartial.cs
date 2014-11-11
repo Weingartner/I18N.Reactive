@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Xml;
 
-namespace I18N.Reactive
+namespace I18N.Reactive.Vsix
 {
     public partial class I18NResX
     {

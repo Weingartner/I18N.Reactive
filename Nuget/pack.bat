@@ -1,0 +1,1 @@
+nuget pack I18N.Reactive.nuspec -OutputDirectory ..\..\NuGet -Version 0.0.1-alpha

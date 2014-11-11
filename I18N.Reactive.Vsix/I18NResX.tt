@@ -28,7 +28,7 @@ using System.Linq;
 using System.Reflection;
 using System.Collections.Generic; 
 using System.Text.RegularExpressions;
-using Weingartner.I18N;
+using I18N.Reactive;
 
 namespace <#= I18NHelpers.Current.NormalizeString(Namespace)#>  {
     public class <#= ClassName #> : INotifyPropertyChanged {
