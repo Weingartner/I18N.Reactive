@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>I18N.Reactive</id>
-    <version>2.0.33</version>
+    <version>0.0.0</version>
     <title>I18N.Reactive</title>
     <authors>Weingartner</authors>
     <owners>Weingartner</owners>
@@ -31,10 +31,9 @@
     <tags>I18N Reactive T4 Culture WPF</tags>
   </metadata>
   <files>
-    <file src="..\I18N\bin\Release\I18N.dll" target="lib\net45" />
+    <file src="..\I18N.Reactive\bin\Release\I18N.Reactive.dll" target="lib\net45" />
     <file src="tools\init.ps1" target="tools" />
     <file src="tools\install.ps1" target="tools" />
     <file src="..\I18N.Reactive.Vsix\bin\Release\I18N.Reactive.vsix" target="tools" />
-    <!--<file src="content\" target="content" />-->
   </files>
 </package>
