@@ -22,12 +22,6 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
     <copyright>Weingartner 2014</copyright>
-    <dependencies>
-        <group targetFramework="net45">
-            <dependency id="StudioShell.Provider" />
-        </group>
-    </dependencies>
-    <references></references>
     <tags>I18N Reactive T4 Culture WPF</tags>
   </metadata>
   <files>
