@@ -120,7 +120,7 @@ namespace <#= I18NHelpers.Current.NormalizeString(Namespace)#>  {
         ///        </item>
         ///    </list>
         ///</summary>
-        public string <#= I18NHelpers.Current.NormalizeItem(item.Key, false)#> { get { return GetResourceString("<#=item.Key#>"); } }
+        public string <#= I18NHelpers.Current.NormalizeItem(item.Key, false)#> => GetResourceString("<#=item.Key#>");
 <# 
         if ((I18NHelpers.Current.GetType(item.Comment) & I18NHelpers.ResxType.Constant) == I18NHelpers.ResxType.Constant) {	
         #>

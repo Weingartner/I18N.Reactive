@@ -3,22 +3,13 @@
   <Identifier Id="86A2E64F-1782-480F-A3B7-8C52E9E786FF">
     <Name>I18N.Reactive</Name>
     <Author>Weingartner Maschinenbau GmbH</Author>
-    <Version>2.1.0</Version>
+    <Version>3.0.0</Version>
     <Description xml:space="preserve">Custom tool for converting ResX files to reactive and strongly typed resource files.</Description>
     <Locale>1033</Locale>
     <InstalledByMsi>false</InstalledByMsi>
     <SupportedProducts>
-      <!--<VisualStudio Version="10.0">
-        <Edition>Pro</Edition>
-        <Edition>Express_All</Edition>
-      </VisualStudio>-->
-      <VisualStudio Version="11.0">
-        <Edition>Pro</Edition>
-        <!--<Edition>Express_All</Edition>-->
-      </VisualStudio>
       <VisualStudio Version="14.0">
         <Edition>Pro</Edition>
-        <!--<Edition>Express_All</Edition>-->
       </VisualStudio>
     </SupportedProducts>
     <SupportedFrameworkRuntimeEdition MinVersion="4.5" MaxVersion="4.5" />

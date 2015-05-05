@@ -269,14 +269,14 @@ namespace ");
             
             #line default
             #line hidden
-            this.Write(" { get { return GetResourceString(\"");
+            this.Write(" => GetResourceString(\"");
             
             #line 123 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(item.Key));
             
             #line default
             #line hidden
-            this.Write("\"); } }\r\n");
+            this.Write("\");\r\n");
             
             #line 124 "C:\Users\egger\Workspace\I18N.Reactive\I18N.Reactive.Vsix\I18NResX.tt"
  
