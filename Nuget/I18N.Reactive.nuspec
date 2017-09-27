@@ -2,7 +2,9 @@
 <package >
   <metadata>
     <id>I18N.Reactive</id>
-    <version>4.1.0</version>
+    <!-- Version is handled by gitversion -->
+    <!-- Set your tags appropriately -->
+    <!--    <version>4.1.0</version> -->
     <title>I18N.Reactive</title>
     <authors>Weingartner</authors>
     <owners>Weingartner</owners>
