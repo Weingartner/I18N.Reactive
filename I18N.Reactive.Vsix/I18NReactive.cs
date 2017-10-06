@@ -16,6 +16,7 @@ namespace I18N.Reactive.Vsix
     [Guid(GuidList.GuidI18NReactivetring)]
     [ProvideObject(typeof(I18NReactive))]
     [CodeGeneratorRegistration(typeof(I18NReactive), "I18N.Reactive", vsContextGuids.vsContextGuidVCSProject, GeneratesDesignTimeSource = true)]
+    [CodeGeneratorRegistration(typeof(I18NReactive), "I18N.Reactive", "{9A19103F-16F7-4668-BE54-9A1E7A4F7556}", GeneratesDesignTimeSource = true)]
     public class I18NReactive : IVsSingleFileGenerator, IObjectWithSite
     {
         private object _Site;
@@ -24,7 +25,7 @@ namespace I18N.Reactive.Vsix
 
         public int DefaultExtension(out string pbstrDefaultExtension)
         {
-            pbstrDefaultExtension = ".cs";
+            pbstrDefaultExtension = ".Designer.cs";
             return VSConstants.S_OK;
         }
 
