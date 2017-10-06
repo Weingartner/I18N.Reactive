@@ -3,7 +3,7 @@
   <Identifier Id="86A2E64F-1782-480F-A3B7-8C52E9E786FF">
     <Name>I18N.Reactive</Name>
     <Author>Weingartner Maschinenbau GmbH</Author>
-    <Version>4.0.4</Version>
+    <Version>4.0.5</Version>
     <Description xml:space="preserve">Custom tool for converting ResX files to reactive and strongly typed resource files.</Description>
     <Locale>1033</Locale>
     <InstalledByMsi>false</InstalledByMsi>

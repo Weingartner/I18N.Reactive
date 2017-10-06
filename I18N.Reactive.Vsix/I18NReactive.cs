@@ -25,7 +25,7 @@ namespace I18N.Reactive.Vsix
 
         public int DefaultExtension(out string pbstrDefaultExtension)
         {
-            pbstrDefaultExtension = ".Designer.cs";
+            pbstrDefaultExtension = ".resx.cs";
             return VSConstants.S_OK;
         }
 

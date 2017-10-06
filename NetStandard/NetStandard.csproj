@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Properties\lang.Designer.cs">
+    <Compile Update="Properties\lang.resx.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>lang.resx</DependentUpon>
@@ -19,7 +19,7 @@
   <ItemGroup>
     <EmbeddedResource Update="Properties\lang.resx">
       <Generator>I18NReactive</Generator>
-      <LastGenOutput>lang.Designer.cs</LastGenOutput>
+      <LastGenOutput>lang.resx.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 
