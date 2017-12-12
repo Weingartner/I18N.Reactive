@@ -26,7 +26,7 @@
     <tags>I18N Reactive T4 Culture WPF</tags>
   </metadata>
   <files>
-    <file src="..\I18N.Reactive\bin\Release\I18N.Reactive.dll" target="lib\net46" />
+    <file src="..\I18N.Reactive\bin\Release\netstandard2.0\I18N.Reactive.dll" target="lib\net46" />
     <file src="tools\init.ps1" target="tools" />
     <file src="tools\install.ps1" target="tools" />
     <file src="..\I18N.Reactive.Vsix\bin\Release\I18N.Reactive.vsix" target="tools" />
