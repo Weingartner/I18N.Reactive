@@ -93,5 +93,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\I18N.Reactive\I18N.Reactive.csproj">
+      <Project>{df8d0115-b628-4868-a7ba-85992942cd4f}</Project>
+      <Name>I18N.Reactive</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
