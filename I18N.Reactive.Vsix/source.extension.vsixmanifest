@@ -1,21 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Vsix Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
-  <Identifier Id="86A2E64F-1782-480F-A3B7-8C52E9E786FF">
-    <Name>I18N.Reactive</Name>
-    <Author>Weingartner Maschinenbau GmbH</Author>
-    <Version>4.0.5</Version>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="86A2E64F-1782-480F-A3B7-8C52E9E786FF" Version="5.0.0" Language="en-US" Publisher="Weingartner Maschinenbau GmbH" />
+    <DisplayName>I18N.Reactive</DisplayName>
     <Description xml:space="preserve">Custom tool for converting ResX files to reactive and strongly typed resource files.</Description>
-    <Locale>1033</Locale>
-    <InstalledByMsi>false</InstalledByMsi>
-    <SupportedProducts>
-      <VisualStudio Version="15.0">
-        <Edition>Pro</Edition>
-      </VisualStudio>
-    </SupportedProducts>
-    <SupportedFrameworkRuntimeEdition MinVersion="4.5" MaxVersion="4.6" />
-  </Identifier>
-  <References/>
-  <Content>
-    <VsPackage>|%CurrentProject%;PkgdefProjectOutputGroup|</VsPackage>
-  </Content>
-</Vsix>
+  </Metadata>
+  <Installation InstalledByMsi="false" AllUsers="false" SystemComponent="false" Scope="ProductExtension">
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[11.0, 17.0]" />
+  </Installation>
+  <Dependencies>
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+  </Assets>
+  <Prerequisites> 
+    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0,)" DisplayName="Visual Studio core editor" /> 
+  </Prerequisites>
+</PackageManifest>
